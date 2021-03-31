@@ -72,8 +72,8 @@ class PasswordHash {
     get_random_bytes(count) {
         const promise = new Promise((resolve, reject) => {
             let output = '';
-            const randomSource = RandBytes.urandom.getInstance();
-            randomSource.getRandomBytes(count, function (buff) {
+            const randomSource = RandBytes.timeRandom.getInstance();
+            randomSource.getRandomBytes(count, function(buff) {
                 resolve(buff.toString('binary'));
             });
         });
@@ -82,7 +82,8 @@ class PasswordHash {
 
     encode64(input, count) {
         let output = '';
-        let i = 0, value;
+        let i = 0,
+            value;
         let v;
 
         do {
