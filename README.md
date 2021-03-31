@@ -1,3 +1,7 @@
+## Update
+
+Forked from https://github.com/glauberportella/password-hash, fixed this error: "ENOENT: no such file or directory, open 'c:\dev\urandom'".
+
 # Node PasswordHash module
 
 A Node.js port of Wordpress `/wp-includes/class-phpass.php` class used to hash passwords.
